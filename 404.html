@@ -1,9 +1,14 @@
 <html>
-<head></head>
+<head>
+</head>
 <body>
 <script type="text/javascript">
 //<![CDATA[
-    document.write("<pre>", location.href, "</pre>");
+    var encodeHTML = function (str) {
+        if (str.length == 0) { return ""; }
+        return str.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
+    }
+    document.write("<pre>", encodeHTML(location.href), "</pre>");
 //]]>
 </script>
 </body>
