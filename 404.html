@@ -6,7 +6,7 @@
 //<![CDATA[
     var encodeHTML = function (str) {
         if (str.length == 0) { return ""; }
-        return str.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
+        return str.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&#34;").replace(/'/g, "&#39;");
     }
     document.write("<pre>", encodeHTML(location.href), "</pre>");
 //]]>
